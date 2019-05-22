@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Bankomat.login();
+/*        Bankomat.login();
         Bankomat bankomat = new Bankomat();
         Account acc1 = new Account(10000.0, 2019);
 
@@ -19,5 +19,16 @@ public class Main {
         catch (NullPointerException npe){
             System.out.println("Ursäkta, vi har inte någon lista över konton.");
         }
+
+ */
+        Bankomat bankomat = new Bankomat();
+        BankomatIO io = new BankomatIO();
+        Account account = io.createAccount();
+        bankomat.addAccount(account);
+        Account account2 = bankomat.getAccount(0);
+
+        account2.setBalance(-1000_000);
+        System.out.println(account2.getBalance() );
     }
+
 }
