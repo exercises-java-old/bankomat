@@ -7,11 +7,11 @@ import java.util.Scanner;
 
 public class Bankomat implements Serializable {
 
-    static int pinCode = 2019;
     static Scanner scanner = new Scanner(System.in);
-    ArrayList<Account> accounts = new ArrayList<>();
+    private ArrayList<Account> accounts = new ArrayList<>();
     private static String filePath = "C:\\Users\\zgrkbr\\git\\bankomat\\bankomat.kib";
     private static final long serialVersionID = 0L;
+
     public static boolean login(Account account, String pinCode) {
         return  account.getPinCode() == pinCode ;
     }
