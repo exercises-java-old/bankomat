@@ -32,9 +32,11 @@ public class Main {
         bankomat.save();
 */
         Bankomat loadedBankomat = Bankomat.load();
-
+        BankomatIO io = new BankomatIO();
         System.out.println("==========================");
         System.out.println(loadedBankomat.getAccount(0));
+
+        loadedBankomat.addAccount(new Account(io.enterBalance(), io.enterPinCode()));
     }
 
 }

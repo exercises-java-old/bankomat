@@ -36,6 +36,10 @@ public class BankomatIO {
         return input;
     }//enterPinCode
 
+    /*
+    Deprecated since it does more than one thing and also things not concerning I/O
+     */
+    @Deprecated
     public Account createAccount(){
        double balance = 0;
        String pinCode = "";
@@ -59,5 +63,26 @@ public class BankomatIO {
 
         return new Account(balance, pinCode);
     }//createAccount
+
+    public double enterBalance(){
+        double balance = 0;
+        correctInput = false;
+
+        System.out.print("Vänligen ange saldo: ");
+
+        while(!correctInput){
+            try{
+                balance = scanner.nextDouble();
+                if( balance < 0){
+                    System.out.println("Saldot kan inte understiga 0 kr.");
+                }
+                else correctInput = true;
+            }catch (InputMismatchException e){
+                System.out.println("Vänligen ange saldot med ett decimaltal.");
+                scanner.nextLine();
+            }
+        }
+        return balance;
+    }
 
 }//BankomatIO

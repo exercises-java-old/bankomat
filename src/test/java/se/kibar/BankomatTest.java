@@ -18,6 +18,17 @@ public class BankomatTest {
 //        assertFalse(testAccount.getPinCode().equals(testPinCode2));
 
         assertTrue(testBankomat.login(testAccount, testPinCode1));
-        
+
+    }
+
+    @Test
+    public void addAccount() {
+        Bankomat testBankomat = new Bankomat();
+        Account testAccount = new Account(1000, "1234");
+
+        testBankomat.addAccount(testAccount);
+
+        assertEquals(testAccount, testBankomat.getAccount((0)));
+
     }
 }
