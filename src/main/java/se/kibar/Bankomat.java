@@ -14,15 +14,15 @@ public class Bankomat implements Serializable {
 
     public static boolean login(Account account, String pinCode) {
         return  account.getPinCode() == pinCode ;
-    }
+    }//login
 
     public void addAccount(Account newAccount) {
         accounts.add(newAccount);
-    }
+    }//addAccount
 
     public Account getAccount(int index) throws IndexOutOfBoundsException {
         return accounts.get(index);
-    }
+    }//getAccount
 
     public void save(){
         File file = new File(filePath);
@@ -36,7 +36,7 @@ public class Bankomat implements Serializable {
             e.printStackTrace();
             System.out.println("Failed to write.");
         }
-    }
+    }//save
 
     public static Bankomat load(){
         Bankomat temp = null;
@@ -55,5 +55,5 @@ public class Bankomat implements Serializable {
             System.out.println("Impossible error");
         }
         return temp;
-    }
-}
+    }//load
+}//Bankomat

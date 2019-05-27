@@ -34,7 +34,7 @@ public class BankomatIO {
 
         }
         return input;
-    }
+    }//enterPinCode
 
     public Account createAccount(){
        double balance = 0;
@@ -55,10 +55,9 @@ public class BankomatIO {
                 scanner.nextLine();
             }
         }
-
         pinCode = enterPinCode();
 
         return new Account(balance, pinCode);
     }//createAccount
 
-}
+}//BankomatIO

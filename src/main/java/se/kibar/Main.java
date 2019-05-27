@@ -3,10 +3,10 @@ package se.kibar;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
-//        Bankomat.login();
+/*
+        Bankomat.login();
         Bankomat bankomat = new Bankomat();
-/*        Account acc1 = new Account(10000.0, 2019);
+        Account acc1 = new Account(10000.0, 2019);
 
         //bankomat.addAccount(acc1);
 
@@ -19,8 +19,6 @@ public class Main {
         catch (NullPointerException npe){
             System.out.println("Ursäkta, vi har inte någon lista över konton.");
         }
-
-
 
        BankomatIO io = new BankomatIO();
         Account account = io.createAccount();
